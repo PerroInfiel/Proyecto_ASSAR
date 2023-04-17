@@ -1,11 +1,11 @@
 MODULE Module1
-    !Declaración de socket
+    !Declaraciï¿½n de socket
      VAR socketdev serverSocket; !Socket del servidor
 VAR socketdev clientSocket; !Socket del cliente
 VAR string data; ! Recibe la cadena del cliente
 
-    ! Declaración de variables
-    VAR num Bucle; !Declaración d bucle para el while
+    ! Declaraciï¿½n de variables
+    VAR num Bucle; !Declaraciï¿½n d bucle para el while
 
     
    
@@ -67,17 +67,17 @@ VAR string tablas;
     CONST robtarget Target_6:=[[701.720701408,257.984497295,276.401631453],[0.071390696,0.230297295,-0.970350166,0.016943449],[0,-1,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
    
      PROC main()
-         !Conexión
+         !Conexiï¿½n
 fin:
          SocketCreate serverSocket;
        SocketBind serverSocket, "192.168.125.1", 1900;
            SocketListen serverSocket; !Se pone en modo de escucha
           
               SocketAccept serverSocket,clientSocket;
-        SocketSend clientSocket \Str:="Conexión con ABB correcta";
+        SocketSend clientSocket \Str:="Conexiï¿½n con ABB correcta";
 
-WHILE Bucle = 0 DO !Hay que hacer un bucle para mantener la conexión todo el rato al cliente, porque si no haría un solo ciclo
-SocketReceive clientSocket \str:=data; !Lo que reciba por el socket del cliente lo almacenará en la variable data
+WHILE Bucle = 0 DO !Hay que hacer un bucle para mantener la conexiï¿½n todo el rato al cliente, porque si no harï¿½a un solo ciclo
+SocketReceive clientSocket \str:=data; !Lo que reciba por el socket del cliente lo almacenarï¿½ en la variable data
 SocketReceive clientSocket \str:=program;
 SocketReceive clientSocket \str:=tablas;
  
